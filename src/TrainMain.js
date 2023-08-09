@@ -3,6 +3,7 @@ import "./App.css";
 import Train from "./components/Train";
 import trainData from "./TrainData";
 import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const TrainMain = () => {
   const [selectedTrain, setSelectedTrain] = useState(null);
