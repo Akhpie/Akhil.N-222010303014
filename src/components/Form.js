@@ -8,6 +8,11 @@ import {
   Avatar,
 } from "@mui/material";
 import Navbar from "./Navbar";
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import InputAdornment from "@mui/material/InputAdornment";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import ForwardToInboxIcon from "@mui/icons-material/ForwardToInbox";
+import SendIcon from "@mui/icons-material/Send";
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -60,6 +65,13 @@ const Form = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                ),
+              }}
             />
             <TextField
               variant="filled"
@@ -71,6 +83,13 @@ const Form = () => {
               type="email"
               value={formData.email}
               onChange={handleChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AlternateEmailIcon />
+                  </InputAdornment>
+                ),
+              }}
             />
             <TextField
               variant="filled"
@@ -83,6 +102,13 @@ const Form = () => {
               rows={4}
               value={formData.message}
               onChange={handleChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <ForwardToInboxIcon />
+                  </InputAdornment>
+                ),
+              }}
             />
             <Button
               type="submit"
@@ -90,6 +116,7 @@ const Form = () => {
               variant="contained"
               color="primary"
               style={{ margin: "24px 0 16px" }}
+              startIcon={<SendIcon />}
             >
               Send Message
             </Button>
