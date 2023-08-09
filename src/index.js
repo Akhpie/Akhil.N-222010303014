@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import TrainMain from "./TrainMain";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Form from "./components/Form";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route path="others" element={<App />} />
         <Route path="/" element={<TrainMain />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
